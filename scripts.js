@@ -8,8 +8,8 @@ Person.prototype.greet = function(other) {
     console.log('Hello ' + other.name + ', I am ' + this.name + '!');
 };
 
-Person.prototype.info = function(info) {
-    console.log('Hello my name is' + " " + info.name + " " + 'My email is' + " " + info.email + " " + 'My phone number is' + " " + info.phone + '.');
+Person.prototype.info = function() {
+    console.log('Hello my name is' + " " + this.name + ", " + 'My email is' + " " + this.email + ", " + 'My phone number is' + " " + this.phone + '.');
 
 }
 
@@ -24,16 +24,11 @@ thePeople[0].greet(thePeople[1])
 thePeople[1].greet(thePeople[0])
 
 
-
-
-// console.log(thePeople);
-
 thePeople.forEach((person) => {
-    person.info(thePeople[0]);
+    person.info();
+    
 })
-thePeople.forEach((person) => {
-    person.info(thePeople[1]);
-})
+
 
 
 
